@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vim/Linux</title>
+        <meta charset="utf-8">
+        <!--<link rel="icon" href="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fd28htnjz2elwuj.cloudfront.net%2Fwp-content%2Fuploads%2F2013%2F11%2Fportland_state_university_logo.png&f=1" type="image/png">-->
+
+        <!-- All things included for Bootstrap CDN -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <style>
+body {
+    padding-top: 75px;
+}
+
+footer {
+    color: white;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    background-color:#556B2F;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#jumbotron {
+    background-image: url("keyboard.jpeg");
+    background-size: cover;
+    background: contain;
+}
+
+h1 {
+    color: #556B2F;
+    /*font-size: 3vw;*/
+}
+
+        </style>
+    </head>
+
+
+
+    <!-- Body of the webpage -->
+    <body>
+
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#556B2F;"> 
+
+                <!-- Logo at the top of the navbar
+                <a class="float-left navbar-brand" href="https://www.pdx.edu" target="_blank">
+                    <img class="img-fluid rounded" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fd28htnjz2elwuj.cloudfront.net%2Fwp-content%2Fuploads%2F2013%2F11%2Fportland_state_university_logo.png&f=1" alt="Portland State University Logo" style="width:40px;">
+                </a>-->
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="slides.html">Slides/Code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vim.html">Vim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gdb.html">Debugging</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- End of the nav bar -->
+
+
+
+
+        <!-- Start of the main body of the page -->
+        <div class="container-fluid">
+            <main>
+            <header class="jumbotron jumbotron-fluid text-white" id="jumbotron">
+                <div class="container-fluid text-center">
+                    <h2 class="pb-4 display-1" style="font-size: 8vw;">Vim/Linux</h2>
+                    <p class="lead pb-4" style="font-size:3vw;">CS202 Lab</p> 
+                </div>
+            </header>
+            </main>
+        </div>
+
+        <br><br><br>
+
+
+
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-8 text-left">
+                    <h1 class="text-center">Commands:</h1>
+
+                    <br>
+
+                    <h2 class="font-weight-bold"><br>Navigation:</h2>
+                    <br>
+                    <ul>
+                        <li>h - Move left.</li>
+                        <li>j - Move down.</li>
+                        <li>k - Move up.</li>
+                        <li>l - Move right.</li>
+
+                        <br>
+
+                        <li>$ - Move to the end of a line.</li>
+                        <li>0 (zero) - Move to the beginning of the current line.</li>
+                        <li>gg - Navigate to the first line of the file.</li>
+                        <li>G - Navigate to the last line in the file.</li>
+                        <li>"number" G - Navigate to a specific line number in the file.</li>
+                        <li>"number" "enter" - Go down a "number" of lines from the current position.</li>
+                        <li>control + d - Page down in the file.</li>
+                        <li>control + b - Page up in the file.</li>
+                    </ul>
+
+                    <h2 class="font-weight-bold"><br>Copy and Paste:</h2>
+                    <br>
+                    <ul>
+                        <li>yy - Yanks (copies) the current line.</li>
+                        <li>"number" yy - Yanks (copies) the specified number of lines.</li>
+                        <li>dd - Deletes the current line.</li>
+                        <li>"number" dd - Deletes the specified number of lines.</li>
+                        <li>dw - Deletes the word at the current position.</li>
+                        <li>d$ - Deltes from the cursor's position to the end of the current line.</li>
+                    </ul>
+
+                    <h2 class="font-weight-bold"><br>Working with files:</h2>
+                    <br>
+                    <p class="font-weight-bold">Opening files with as tabs using the the -p flag.</p>
+                    <ul>
+                        <li>"number"gt - Navigates forward a "number" of tabs.</li>
+                        <li>"number"Gt - Navigates backwards a "number" of tabs.</li>
+                        <li>:tabnew "filename" - Opens a new file in another tab.</li>
+                        <li>:tabclose - Closes the current file.</li>
+                    </ul>
+
+                    <br>
+                    <p class="font-weight-bold">Opening files with split screen.</p>
+                    <ul>
+                        <li>Open files with the "-o" flag (lowercase letter o) for horizontal split.</li>
+                        <li>Open files with the "-O" flag (uppercase letter o) for vertical split.</li>
+                        <li>control + "ww" - Navigate between files.</li>
+                        <li>:split "filename" - Open up a file with horizontal split.</li>
+                        <li>:vs "filename" - Open up a file with vertical split.</li>
+                    </ul>
+
+                    <br>
+                    <p class="font-weight-bold">Saving and quiting files.</p>
+                    <ul>
+                        <li>:w - Saves the current file you're editing.</li>
+                        <li>:wa or :x - Saves all the files you currently have open.</li>
+                        <li>:q - Quits the file you're currently editing.</li>
+                        <li>:qa - Quits all the files you currently have open.</li>
+                        <li>:wqa or :xa - Saves and closes all the files you currently have open.</li>
+                    </ul>
+
+                    <br>
+                    <p class="font-weight-bold">Working with fils in the forground/background.</p>
+                    <ul>
+                        <li>jobs - from the command line tells you what files are currently in the background.</li>
+                        <li>control + "z" - Pushes all files in your current editor session into the background.</li>
+                        <li>fg - From the command line bring the editor session currently in the background to the foreground.</li>
+                        <li>When working with fg use the ":wa" command to save all files.
+                    </ul>
+
+                    <h2 class="font-weight-bold"><br>Searching and Replacing:</h2>
+                    <br>
+                    <ul>
+                        <li>:/word - searches forward for the next occurance of "word" in the file.</li>
+                        <li>:?word - searches backwards for the next occurance of "word" in the file.</li>
+                        <li>:noh - Unhighlights the word/phrase after being searched for.</li>
+                        <li>:s/to_replace/replace_with - Replaces the next occurance of the word to replace with the phrase to replace it with.</li    >
+                        <li>:%s/to_replace/replace_with/gc - Replaces all occurances of the word to replace with the phrase to replace it with. The     "g" and "c" at the end are flags for the search and replace which stand for "replace all" and "confirm" before replacing respectively.</li    >
+                    </ul>
+
+                </div>
+
+                <!-- Second row in the grid column containing my personal card info. -->
+                <div class="col-md-4">
+
+                    <br><br>
+
+                    <div class="card" style="width:auto">
+                        <img class="card-img-top" src="UNADJUSTEDNONRAW_thumb_5ff.jpg" alt="Headshot image of Joseph Jesse">
+                        <div class="card-body">
+                            <h4 class="card-title">Joseph Jesse</h4>
+                            <p class="card-text">Computer science undergraduate and Technical Course Support Specialist at Portland State University.</p>
+                            <a target="_blank" href="https://www.linkedin.com/in/joseph-jesse-007991139/" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <footer class="text-center">
+            <div class="container">
+                <p><a target="_blank" href="mailto:jjesse@pdx.edu"><img src="https://image.flaticon.com/icons/svg/281/281769.svg" alt="Image of the Gmail logo." height="12" width="12">  jjesse@pdx.edu</a>   |   <a target="_blank" href="https://www.linkedin.com/in/joseph-jesse-007991139/">LinkedIn    <img id="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Picture of the LinkedIn logo" height="12" width="12"></a></p>
+            </div>
+        </footer>
+    </body>
+</html>
